@@ -16,17 +16,37 @@ from pyglet.window import key
 
 import config
 
-class Presentation(Scene):
+class Background(Scene):
 
-    def __init__(self, background = None):
+    def __init__(self, bg_img = None):
 
         super(Presentation, self).__init__()
 
         self.background = pyglet.resource.image(config.MEDIA_PATH +\
-                                                    background)
+                                                    bg_img)
 
     def draw(self):
         glPushMatrix()
         self.transform()
         self.background.blit(0,0)
         glPopMatrix()
+
+class Slide(Layer):
+
+    is_event_handler = True
+
+    def on_key_press(self, _key, modifiers):
+        if _key == key.LEFT:
+            SlidesManager.previous()
+        elif _key == key.RIGHT:
+            SlidesManager.next()
+
+
+class SlidesManager(object):
+
+    def previous(self):
+        pass
+
+    def next(self):
+        pass
+
