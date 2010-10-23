@@ -25,7 +25,7 @@ class Presentation(Scene):
         super(Presentation, self).__init__()
 
         self.background = pyglet.resource.image(os.path.join(
-                                    config.MEDIA_PATH, background)
+                                    config.MEDIA_PATH, background))
 
     def draw(self):
         glPushMatrix()
