@@ -1,6 +1,8 @@
 # cocoslides - a slides framework built in Cocos2d
 # by Flávio Ribeiro (email@flavioribeiro.com)
 
+import os
+
 from cocos.sprite import *
 from cocos.director import director
 from cocos.layer import Layer
@@ -22,8 +24,8 @@ class Background(Scene):
 
         super(Presentation, self).__init__()
 
-        self.background = pyglet.resource.image(config.MEDIA_PATH +\
-                                                    bg_img)
+        self.background = pyglet.resource.image(os.path.join(
+                                    config.MEDIA_PATH, background))
 
     def draw(self):
         glPushMatrix()
