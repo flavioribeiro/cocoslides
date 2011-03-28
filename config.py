@@ -1,3 +1,4 @@
+# -*- conding: utf-8 -*-
 # cocoslides - a slides framework built in Cocos2d
 # by Flávio Ribeiro (email@flavioribeiro.com)
 
