@@ -6,5 +6,5 @@ import sys
 TEST_FILE_PATH = os.path.abspath('./sample_presentation.txt')
 
 def test_file_not_exists():
-	pass
+    pass
 	

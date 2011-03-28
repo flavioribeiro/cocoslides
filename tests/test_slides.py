@@ -3,4 +3,4 @@
 from cocoslides.slides import CocoSlides
 
 def test_run_slides_method_exists():
-	assert hasattr(CocoSlides, 'run_slides')
+    assert hasattr(CocoSlides, 'run_slides')
